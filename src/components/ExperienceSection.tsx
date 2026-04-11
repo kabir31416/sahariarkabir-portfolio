@@ -9,8 +9,14 @@ const timeline = [
 ];
 
 const ExperienceSection = () => (
-  <section id="experience" className="section-padding">
-    <div className="container mx-auto max-w-3xl">
+  <section id="experience" className="section-padding relative overflow-hidden">
+    {/* Vertical gradient fade with soft light spots */}
+    <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[100px]" />
+    </div>
+
+    <div className="container mx-auto max-w-3xl relative z-10">
       <AnimatedSection>
         <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">Journey</p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
@@ -25,9 +31,9 @@ const ExperienceSection = () => (
           <AnimatedSection key={i} delay={i * 0.15}>
             <div className={`relative flex items-start gap-6 mb-10 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
               <div className="hidden md:block md:w-1/2" />
-              <div className={`absolute left-5 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center z-10 transition-all ${
+              <div className={`absolute left-5 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center z-10 ${
                 item.current
-                  ? "bg-primary/20 border-2 border-primary shadow-[0_0_20px_hsl(260_80%_65%/0.4)]"
+                  ? "bg-primary/20 border-2 border-primary"
                   : "bg-muted border-2 border-primary"
               }`}>
                 <Briefcase size={16} className="text-primary" />

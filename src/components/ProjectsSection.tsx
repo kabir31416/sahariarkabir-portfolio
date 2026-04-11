@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import { ExternalLink, Github } from "lucide-react";
-import { useState, useRef } from "react";
 
 const projects = [
   { title: "SaaS Dashboard", desc: "Analytics dashboard with real-time data visualization, user management, and subscription billing.", tech: ["React", "Node.js", "MongoDB", "Stripe"], color: "from-purple-500/20 to-blue-500/20" },
@@ -12,35 +10,14 @@ const projects = [
   { title: "REST API Platform", desc: "Scalable API platform with auth, rate limiting, documentation, and monitoring.", tech: ["Node.js", "Express", "MongoDB", "Docker"], color: "from-indigo-500/20 to-violet-500/20" },
 ];
 
-const TiltCard = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [transform, setTransform] = useState("");
-
-  const handleMove = (e: React.MouseEvent) => {
-    const el = ref.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    setTransform(`perspective(600px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) scale(1.02)`);
-  };
-
-  return (
-    <div
-      ref={ref}
-      onMouseMove={handleMove}
-      onMouseLeave={() => setTransform("")}
-      style={{ transform, transition: "transform 0.2s ease-out" }}
-      className={className}
-    >
-      {children}
-    </div>
-  );
-};
-
 const ProjectsSection = () => (
-  <section id="projects" className="section-padding relative">
-    <div className="blob w-72 h-72 bg-secondary/10 bottom-20 -left-20" style={{ animationDelay: "2s" }} />
+  <section id="projects" className="section-padding relative overflow-hidden">
+    {/* Subtle animated mesh gradient */}
+    <div className="absolute inset-0 -z-10">
+      <div className="absolute top-0 left-1/3 w-[600px] h-[600px] rounded-full bg-secondary/6 blur-[140px]" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-accent/6 blur-[120px]" />
+    </div>
+
     <div className="container mx-auto relative z-10">
       <AnimatedSection>
         <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">Portfolio</p>
@@ -52,13 +29,11 @@ const ProjectsSection = () => (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((p, i) => (
           <AnimatedSection key={p.title} delay={i * 0.1}>
-            <TiltCard className="glass-card overflow-hidden group">
-              <div className={`h-44 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden`}>
-                <span className="text-3xl font-bold font-heading text-foreground/20 group-hover:text-foreground/40 transition-colors duration-300">
+            <div className="glass-card overflow-hidden hover:translate-y-[-2px] transition-transform duration-300">
+              <div className={`h-44 bg-gradient-to-br ${p.color} flex items-center justify-center`}>
+                <span className="text-3xl font-bold font-heading text-foreground/20">
                   {p.title}
                 </span>
-                {/* Glow on hover */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-primary/10 to-transparent" />
               </div>
               <div className="p-5">
                 <h3 className="font-bold font-heading text-lg mb-2">{p.title}</h3>
@@ -77,7 +52,7 @@ const ProjectsSection = () => (
                   </button>
                 </div>
               </div>
-            </TiltCard>
+            </div>
           </AnimatedSection>
         ))}
       </div>

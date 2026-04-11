@@ -42,8 +42,15 @@ const categories = [
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="section-padding">
-    <div className="container mx-auto">
+  <section id="skills" className="section-padding relative overflow-hidden">
+    {/* Dark gradient with diagonal light streaks */}
+    <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-primary/5 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-secondary/5 to-transparent" />
+    </div>
+
+    <div className="container mx-auto relative z-10">
       <AnimatedSection>
         <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">My Skills</p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">

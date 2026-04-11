@@ -60,35 +60,21 @@ const HeroSection = () => (
           </div>
         </motion.div>
 
-        {/* Right — Developer image */}
+        {/* Right — Developer image (clean glass frame, no animations) */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex justify-center lg:justify-end"
         >
-          <div className="relative">
-            {/* Rotating glow border */}
-            <div className="absolute -inset-1 rounded-2xl animate-spin-slow opacity-60"
-              style={{ background: "conic-gradient(from 0deg, hsl(260 80% 65%), hsl(220 70% 55%), hsl(280 70% 60%), hsl(260 80% 65%))", filter: "blur(12px)" }}
+          <div className="glass-card p-2 rounded-2xl">
+            <img
+              src={devImg}
+              alt="Developer"
+              width={640}
+              height={768}
+              className="rounded-xl w-full max-w-[380px] lg:max-w-[420px] object-cover"
             />
-            <div className="relative glass-card p-2 rounded-2xl">
-              <img
-                src={devImg}
-                alt="Developer"
-                width={640}
-                height={768}
-                className="rounded-xl w-full max-w-[380px] lg:max-w-[420px] object-cover"
-              />
-            </div>
-            {/* Floating badge */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ repeat: Infinity, duration: 3 }}
-              className="absolute -bottom-4 -left-4 glass px-4 py-2 rounded-xl text-xs font-medium"
-            >
-              <span className="gradient-text font-bold">4+</span> Years Experience
-            </motion.div>
           </div>
         </motion.div>
       </div>

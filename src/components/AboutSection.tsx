@@ -45,8 +45,13 @@ const AnimatedCounter = ({ target }: { target: number }) => {
 };
 
 const AboutSection = () => (
-  <section id="about" className="section-padding relative">
-    <div className="blob w-72 h-72 bg-accent/10 top-0 right-0" style={{ animationDelay: "1s" }} />
+  <section id="about" className="section-padding relative overflow-hidden">
+    {/* Soft blurred gradient mesh background */}
+    <div className="absolute inset-0 -z-10">
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/8 blur-[120px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/8 blur-[100px]" />
+    </div>
+
     <div className="container mx-auto relative z-10">
       <AnimatedSection>
         <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">About Me</p>
@@ -60,7 +65,6 @@ const AboutSection = () => (
         </p>
       </AnimatedSection>
 
-      {/* Counters */}
       <div className="grid grid-cols-3 gap-4 mb-12">
         {counters.map((c) => (
           <AnimatedSection key={c.label}>
@@ -75,8 +79,8 @@ const AboutSection = () => (
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {focuses.map((f, i) => (
           <AnimatedSection key={f.label} delay={i * 0.1}>
-            <div className="glass-card p-5 text-center group">
-              <f.icon className="mx-auto mb-3 text-primary group-hover:scale-110 transition-transform" size={28} />
+            <div className="glass-card p-5 text-center">
+              <f.icon className="mx-auto mb-3 text-primary" size={28} />
               <p className="text-sm font-medium">{f.label}</p>
             </div>
           </AnimatedSection>

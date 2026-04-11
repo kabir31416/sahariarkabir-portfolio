@@ -32,7 +32,6 @@ const TestimonialsSection = () => {
     el.addEventListener("scroll", checkScroll);
     checkScroll();
 
-    // Auto-scroll
     const timer = setInterval(() => {
       if (!el) return;
       if (el.scrollLeft >= el.scrollWidth - el.clientWidth - 10) {
@@ -47,7 +46,13 @@ const TestimonialsSection = () => {
 
   return (
     <section className="section-padding relative overflow-hidden">
-      <div className="container mx-auto">
+      {/* Warm dark gradient */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-accent/5 to-background" />
+        <div className="absolute top-1/2 right-1/4 w-[350px] h-[350px] rounded-full bg-accent/5 blur-[120px]" />
+      </div>
+
+      <div className="container mx-auto relative z-10">
         <AnimatedSection>
           <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">Reviews</p>
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
@@ -78,12 +83,11 @@ const TestimonialsSection = () => {
             ))}
           </div>
 
-          {/* Nav buttons */}
           <div className="flex justify-center gap-3 mt-6">
-            <button onClick={() => scroll(-1)} disabled={!canLeft} className="w-9 h-9 rounded-full glass flex items-center justify-center disabled:opacity-30 transition-opacity hover:border-primary/40">
+            <button onClick={() => scroll(-1)} disabled={!canLeft} className="w-9 h-9 rounded-full glass flex items-center justify-center disabled:opacity-30 transition-opacity">
               <ChevronLeft size={16} />
             </button>
-            <button onClick={() => scroll(1)} disabled={!canRight} className="w-9 h-9 rounded-full glass flex items-center justify-center disabled:opacity-30 transition-opacity hover:border-primary/40">
+            <button onClick={() => scroll(1)} disabled={!canRight} className="w-9 h-9 rounded-full glass flex items-center justify-center disabled:opacity-30 transition-opacity">
               <ChevronRight size={16} />
             </button>
           </div>
