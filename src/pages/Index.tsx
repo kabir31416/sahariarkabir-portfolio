@@ -1,6 +1,5 @@
 import { useState, useCallback } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
-import CursorGlow from "@/components/CursorGlow";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -21,7 +20,6 @@ const Index = () => {
   return (
     <>
       {!loaded && <LoadingScreen onComplete={onComplete} />}
-      <CursorGlow />
       <div className={`min-h-screen ${loaded ? "animate-fade-in" : "opacity-0"}`}>
         <Navbar />
         <HeroSection />

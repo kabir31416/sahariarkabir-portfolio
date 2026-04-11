@@ -16,7 +16,6 @@ const languages = [
   { name: "Other", pct: 5, color: "bg-gray-500" },
 ];
 
-// Generate mock contribution data
 const contributions = Array.from({ length: 52 }, () =>
   Array.from({ length: 7 }, () => Math.floor(Math.random() * 5))
 );
@@ -30,8 +29,14 @@ const contribColor = (v: number) => {
 };
 
 const GitHubSection = () => (
-  <section className="section-padding">
-    <div className="container mx-auto">
+  <section className="section-padding relative overflow-hidden">
+    {/* Dark bluish gradient */}
+    <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/8 to-background" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-secondary/6 blur-[140px]" />
+    </div>
+
+    <div className="container mx-auto relative z-10">
       <AnimatedSection>
         <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">Open Source</p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">

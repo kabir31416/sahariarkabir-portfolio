@@ -10,8 +10,14 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="section-padding">
-    <div className="container mx-auto">
+  <section id="services" className="section-padding relative overflow-hidden">
+    {/* Soft purple-blue gradient mesh */}
+    <div className="absolute inset-0 -z-10">
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-primary/6 blur-[140px]" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-secondary/6 blur-[120px]" />
+    </div>
+
+    <div className="container mx-auto relative z-10">
       <AnimatedSection>
         <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">What I Offer</p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
@@ -22,8 +28,8 @@ const ServicesSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s, i) => (
           <AnimatedSection key={s.title} delay={i * 0.1}>
-            <div className="glass-card p-6 group hover:shadow-[0_8px_40px_hsl(260_80%_65%/0.15)] transition-all duration-300">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all">
+            <div className="glass-card p-6 hover:translate-y-[-2px] transition-transform duration-300">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                 <s.icon className="text-primary" size={24} />
               </div>
               <h3 className="font-bold font-heading mb-2">{s.title}</h3>

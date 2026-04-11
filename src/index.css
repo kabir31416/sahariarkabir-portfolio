@@ -110,9 +110,8 @@
   }
 
   .glass-card:hover {
-    border-color: hsl(260 80% 65% / 0.4);
-    box-shadow: 0 8px 40px hsl(260 80% 65% / 0.15);
-    transform: translateY(-4px);
+    border-color: hsl(260 80% 65% / 0.3);
+    box-shadow: 0 8px 32px hsl(260 80% 65% / 0.1);
   }
 
   .gradient-text {
