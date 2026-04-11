@@ -1,3 +1,6 @@
+import { useState, useCallback } from "react";
+import LoadingScreen from "@/components/LoadingScreen";
+import CursorGlow from "@/components/CursorGlow";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -11,21 +14,30 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 
-const Index = () => (
-  <div className="min-h-screen">
-    <Navbar />
-    <HeroSection />
-    <AboutSection />
-    <SkillsSection />
-    <ProjectsSection />
-    <ExperienceSection />
-    <GitHubSection />
-    <ServicesSection />
-    <TestimonialsSection />
-    <ContactSection />
-    <Footer />
-    <BackToTop />
-  </div>
-);
+const Index = () => {
+  const [loaded, setLoaded] = useState(false);
+  const onComplete = useCallback(() => setLoaded(true), []);
+
+  return (
+    <>
+      {!loaded && <LoadingScreen onComplete={onComplete} />}
+      <CursorGlow />
+      <div className={`min-h-screen ${loaded ? "animate-fade-in" : "opacity-0"}`}>
+        <Navbar />
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <GitHubSection />
+        <ServicesSection />
+        <TestimonialsSection />
+        <ContactSection />
+        <Footer />
+        <BackToTop />
+      </div>
+    </>
+  );
+};
 
 export default Index;

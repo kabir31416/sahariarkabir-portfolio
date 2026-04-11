@@ -22,8 +22,8 @@ const ServicesSection = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s, i) => (
           <AnimatedSection key={s.title} delay={i * 0.1}>
-            <div className="glass-card p-6 group">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+            <div className="glass-card p-6 group hover:shadow-[0_8px_40px_hsl(260_80%_65%/0.15)] transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all">
                 <s.icon className="text-primary" size={24} />
               </div>
               <h3 className="font-bold font-heading mb-2">{s.title}</h3>
