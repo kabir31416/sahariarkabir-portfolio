@@ -2,10 +2,10 @@ import AnimatedSection from "./AnimatedSection";
 import { Briefcase } from "lucide-react";
 
 const timeline = [
-  { year: "2024 - Present", title: "Senior Freelance Developer", desc: "Building complex SaaS products and enterprise applications for global clients." },
-  { year: "2023 - 2024", title: "SaaS Development", desc: "Developed multiple SaaS platforms with subscription billing, analytics, and multi-tenancy." },
-  { year: "2022 - 2023", title: "MERN Stack Projects", desc: "Built 15+ full-stack applications including e-commerce, dashboards, and real-time apps." },
-  { year: "2021 - 2022", title: "Freelance & Client Work", desc: "Started freelancing, delivering web solutions for startups and small businesses." },
+  { year: "2024 - Present", title: "Senior Freelance Developer", desc: "Building complex SaaS products and enterprise applications for global clients.", current: true },
+  { year: "2023 - 2024", title: "SaaS Development", desc: "Developed multiple SaaS platforms with subscription billing, analytics, and multi-tenancy.", current: false },
+  { year: "2022 - 2023", title: "MERN Stack Projects", desc: "Built 15+ full-stack applications including e-commerce, dashboards, and real-time apps.", current: false },
+  { year: "2021 - 2022", title: "Freelance & Client Work", desc: "Started freelancing, delivering web solutions for startups and small businesses.", current: false },
 ];
 
 const ExperienceSection = () => (
@@ -19,14 +19,17 @@ const ExperienceSection = () => (
       </AnimatedSection>
 
       <div className="relative">
-        {/* Vertical line */}
         <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-border" />
 
         {timeline.map((item, i) => (
           <AnimatedSection key={i} delay={i * 0.15}>
             <div className={`relative flex items-start gap-6 mb-10 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
               <div className="hidden md:block md:w-1/2" />
-              <div className="absolute left-5 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-muted border-2 border-primary flex items-center justify-center z-10">
+              <div className={`absolute left-5 md:left-1/2 -translate-x-1/2 w-10 h-10 rounded-full flex items-center justify-center z-10 transition-all ${
+                item.current
+                  ? "bg-primary/20 border-2 border-primary shadow-[0_0_20px_hsl(260_80%_65%/0.4)]"
+                  : "bg-muted border-2 border-primary"
+              }`}>
                 <Briefcase size={16} className="text-primary" />
               </div>
               <div className="ml-16 md:ml-0 md:w-1/2 glass-card p-5">
