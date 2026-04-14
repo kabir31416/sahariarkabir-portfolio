@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { label: "About", href: "#about" },
@@ -30,7 +31,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        <a href="#" className="text-xl font-bold font-heading gradient-text">
+        <a href="#" className="text-xl font-bold font-heading gradient-text font-mono">
           &lt;Dev /&gt;
         </a>
 
@@ -44,17 +45,21 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
+          <ThemeToggle />
           <a href="#contact" className="btn-primary text-sm">
             Hire Me
           </a>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-foreground"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-foreground"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>

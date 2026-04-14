@@ -12,15 +12,25 @@ const projects = [
 
 const ProjectsSection = () => (
   <section id="projects" className="section-padding relative overflow-hidden">
-    {/* Subtle animated mesh gradient */}
+    {/* Hex grid bg */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute top-0 left-1/3 w-[600px] h-[600px] rounded-full bg-secondary/6 blur-[140px]" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full bg-accent/6 blur-[120px]" />
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage:
+            "linear-gradient(30deg, hsl(var(--primary)) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary)) 87.5%, hsl(var(--primary)))",
+          backgroundSize: "50px 86px",
+        }}
+      />
     </div>
 
     <div className="container mx-auto relative z-10">
       <AnimatedSection>
-        <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">Portfolio</p>
+        <p className="text-primary font-mono font-medium text-sm tracking-widest mb-2 text-center">
+          {'>'} projects.showcase()
+        </p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
           Featured <span className="gradient-text">Projects</span>
         </h2>
@@ -30,7 +40,7 @@ const ProjectsSection = () => (
         {projects.map((p, i) => (
           <AnimatedSection key={p.title} delay={i * 0.1}>
             <div className="glass-card overflow-hidden hover:translate-y-[-2px] transition-transform duration-300">
-              <div className={`h-44 bg-gradient-to-br ${p.color} flex items-center justify-center`}>
+              <div className={`h-44 bg-gradient-to-br ${p.color} flex items-center justify-center relative`}>
                 <span className="text-3xl font-bold font-heading text-foreground/20">
                   {p.title}
                 </span>

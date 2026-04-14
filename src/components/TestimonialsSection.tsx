@@ -46,15 +46,24 @@ const TestimonialsSection = () => {
 
   return (
     <section className="section-padding relative overflow-hidden">
-      {/* Warm dark gradient */}
+      {/* Warm gradient + concentric rings */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-accent/5 to-background" />
         <div className="absolute top-1/2 right-1/4 w-[350px] h-[350px] rounded-full bg-accent/5 blur-[120px]" />
+        <div
+          className="absolute inset-0 opacity-[0.01]"
+          style={{
+            backgroundImage:
+              "repeating-radial-gradient(circle at 50% 50%, transparent 0px, transparent 40px, hsl(var(--accent) / 0.15) 40px, hsl(var(--accent) / 0.15) 41px)",
+          }}
+        />
       </div>
 
       <div className="container mx-auto relative z-10">
         <AnimatedSection>
-          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">Reviews</p>
+          <p className="text-primary font-mono font-medium text-sm tracking-widest mb-2 text-center">
+            // client_reviews
+          </p>
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
             Client <span className="gradient-text">Testimonials</span>
           </h2>
@@ -71,7 +80,7 @@ const TestimonialsSection = () => {
                 </div>
                 <p className="text-sm text-muted-foreground mb-5 italic leading-relaxed">"{t.text}"</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-sm">
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary text-sm font-mono">
                     {t.name.charAt(0)}
                   </div>
                   <div>

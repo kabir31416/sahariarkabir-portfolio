@@ -30,15 +30,24 @@ const contribColor = (v: number) => {
 
 const GitHubSection = () => (
   <section className="section-padding relative overflow-hidden">
-    {/* Dark bluish gradient */}
+    {/* Matrix-style falling lines background */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary/8 to-background" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-secondary/6 blur-[140px]" />
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(0deg, transparent, transparent 20px, hsl(var(--secondary) / 0.3) 20px, hsl(var(--secondary) / 0.3) 21px)",
+        }}
+      />
     </div>
 
     <div className="container mx-auto relative z-10">
       <AnimatedSection>
-        <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">Open Source</p>
+        <p className="text-primary font-mono font-medium text-sm tracking-widest mb-2 text-center">
+          $ git log --oneline
+        </p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
           GitHub <span className="gradient-text">Activity</span>
         </h2>
@@ -58,7 +67,7 @@ const GitHubSection = () => (
 
       <AnimatedSection>
         <div className="glass-card p-6 overflow-x-auto mb-6">
-          <h3 className="text-sm font-medium mb-4 text-muted-foreground">Contribution Graph</h3>
+          <h3 className="text-sm font-mono font-medium mb-4 text-muted-foreground">contribution_graph</h3>
           <div className="flex gap-[3px] min-w-[700px]">
             {contributions.map((week, wi) => (
               <div key={wi} className="flex flex-col gap-[3px]">
@@ -73,7 +82,7 @@ const GitHubSection = () => (
 
       <AnimatedSection>
         <div className="glass-card p-6">
-          <h3 className="text-sm font-medium mb-4 text-muted-foreground">Top Languages</h3>
+          <h3 className="text-sm font-mono font-medium mb-4 text-muted-foreground">top_languages</h3>
           <div className="flex rounded-full overflow-hidden h-3 mb-4">
             {languages.map((l) => (
               <motion.div
@@ -91,7 +100,7 @@ const GitHubSection = () => (
               <div key={l.name} className="flex items-center gap-2 text-sm">
                 <span className={`w-2.5 h-2.5 rounded-full ${l.color}`} />
                 <span className="text-muted-foreground">{l.name}</span>
-                <span className="font-medium">{l.pct}%</span>
+                <span className="font-medium font-mono text-xs">{l.pct}%</span>
               </div>
             ))}
           </div>
