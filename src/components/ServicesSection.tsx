@@ -11,15 +11,24 @@ const services = [
 
 const ServicesSection = () => (
   <section id="services" className="section-padding relative overflow-hidden">
-    {/* Soft purple-blue gradient mesh */}
+    {/* Gradient mesh + diagonal scanlines */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-primary/6 blur-[140px]" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-secondary/6 blur-[120px]" />
+      <div
+        className="absolute inset-0 opacity-[0.015]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(45deg, transparent, transparent 10px, hsl(var(--primary) / 0.2) 10px, hsl(var(--primary) / 0.2) 11px)",
+        }}
+      />
     </div>
 
     <div className="container mx-auto relative z-10">
       <AnimatedSection>
-        <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">What I Offer</p>
+        <p className="text-primary font-mono font-medium text-sm tracking-widest mb-2 text-center">
+          {'>'} services.render()
+        </p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
           My <span className="gradient-text">Services</span>
         </h2>

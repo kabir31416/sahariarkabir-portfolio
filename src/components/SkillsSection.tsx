@@ -43,16 +43,26 @@ const categories = [
 
 const SkillsSection = () => (
   <section id="skills" className="section-padding relative overflow-hidden">
-    {/* Dark gradient with diagonal light streaks */}
+    {/* Diagonal light streaks + dot matrix */}
     <div className="absolute inset-0 -z-10">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/30 to-background" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-primary/5 to-transparent" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-secondary/5 to-transparent" />
+      {/* Dot matrix pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: "radial-gradient(hsl(var(--primary)) 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      />
     </div>
 
     <div className="container mx-auto relative z-10">
       <AnimatedSection>
-        <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">My Skills</p>
+        <p className="text-primary font-mono font-medium text-sm tracking-widest mb-2 text-center">
+          {'>'} skills.list()
+        </p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
           Tech <span className="gradient-text">Arsenal</span>
         </h2>
@@ -68,7 +78,7 @@ const SkillsSection = () => (
                   <div key={s.name}>
                     <div className="flex justify-between text-sm mb-1.5">
                       <span className="font-medium">{s.name}</span>
-                      <span className="text-muted-foreground">{s.level}%</span>
+                      <span className="text-muted-foreground font-mono text-xs">{s.level}%</span>
                     </div>
                     <div className="h-2 rounded-full bg-muted overflow-hidden">
                       <motion.div

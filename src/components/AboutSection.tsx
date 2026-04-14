@@ -46,15 +46,26 @@ const AnimatedCounter = ({ target }: { target: number }) => {
 
 const AboutSection = () => (
   <section id="about" className="section-padding relative overflow-hidden">
-    {/* Soft blurred gradient mesh background */}
+    {/* Creative background: radial mesh + code rain hint */}
     <div className="absolute inset-0 -z-10">
+      <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-br from-primary/[0.04] via-transparent to-accent/[0.04]" />
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/8 blur-[120px]" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/8 blur-[100px]" />
+      {/* Subtle vertical lines (code rain feel) */}
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(90deg, hsl(var(--primary)) 0px, transparent 1px, transparent 40px)",
+        }}
+      />
     </div>
 
     <div className="container mx-auto relative z-10">
       <AnimatedSection>
-        <p className="text-primary font-medium text-sm uppercase tracking-widest mb-2 text-center">About Me</p>
+        <p className="text-primary font-mono font-medium text-sm tracking-widest mb-2 text-center">
+          // about_me
+        </p>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-6">
           Passionate <span className="gradient-text">Developer</span>
         </h2>

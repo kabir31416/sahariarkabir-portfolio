@@ -22,8 +22,8 @@ const HeroSection = () => (
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-primary font-medium mb-3 tracking-widest uppercase text-xs">
-            Welcome to my portfolio
+          <p className="text-primary font-mono font-medium mb-3 tracking-widest text-xs">
+            {'>'} welcome_to_portfolio()
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading mb-4 leading-[1.1]">
             MERN Stack
@@ -60,7 +60,7 @@ const HeroSection = () => (
           </div>
         </motion.div>
 
-        {/* Right — Developer image (clean glass frame, no animations) */}
+        {/* Right — Developer image */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
