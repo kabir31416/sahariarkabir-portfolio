@@ -28,13 +28,11 @@ const Index = () => {
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
-        <GitHubSection />
         <CertificationsSection />
         <ServicesSection />
         <TestimonialsSection />
         <ContactSection />
         <Footer />
-        <BackToTop />
       </div>
     </>
   );

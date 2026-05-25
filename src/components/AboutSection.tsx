@@ -11,9 +11,9 @@ const focuses = [
 ];
 
 const counters = [
-  { label: "Projects Completed", target: 50 },
-  { label: "Years Experience", target: 4 },
-  { label: "Happy Clients", target: 30 },
+  { label: "Projects Completed", target: 10 },
+  { label: "Years Experience", target: 1 },
+  { label: "Happy Clients", target: 10 },
 ];
 
 const AnimatedCounter = ({ target }: { target: number }) => {
@@ -70,7 +70,7 @@ const AboutSection = () => (
           Passionate <span className="gradient-text">Developer</span>
         </h2>
         <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-          With 4+ years of experience building production-ready web applications,
+          With 1+ years of experience building production-ready web applications,
           I specialize in the MERN stack and love turning complex problems into
           elegant, scalable solutions.
         </p>

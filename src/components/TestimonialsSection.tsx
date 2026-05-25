@@ -3,11 +3,38 @@ import AnimatedSection from "./AnimatedSection";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
-  { name: "Alex Johnson", role: "Startup Founder", text: "Incredible work on our SaaS platform. Delivered on time with exceptional code quality.", rating: 5 },
-  { name: "Sarah Chen", role: "Product Manager", text: "The best developer I've worked with. Turned our complex requirements into a beautiful, functional app.", rating: 5 },
-  { name: "Michael Ross", role: "CTO, TechCorp", text: "Reliable, skilled, and great at communication. Built our entire backend API architecture.", rating: 5 },
-  { name: "Emily Davis", role: "Design Lead", text: "Pixel-perfect implementation every time. Truly understands modern UI/UX principles.", rating: 5 },
-  { name: "James Wilson", role: "CEO, StartupX", text: "Delivered a complex real-time app in record time. Would hire again without hesitation.", rating: 5 },
+  
+  {
+    name: "Verified Client",
+    role: "WordPress Project",
+    text: "Excellent communication and timely delivery. The website was built exactly according to our requirements.",
+    rating: 5
+  },
+  {
+    name: "Verified Client",
+    role: "Android App Project",
+    text: "Very satisfied with the app development work. Features were implemented smoothly and professionally.",
+    rating: 5
+  },
+  {
+    name: "Verified Client",
+    role: "Firebase Integration",
+    text: "Solved complex Firebase issues and improved our app performance significantly.",
+    rating: 5
+  },
+  {
+    name: "Verified Client",
+    role: "Bug Fixing",
+    text: "Quickly identified and fixed critical bugs in our existing project.",
+    rating: 5
+  },
+  {
+    name: "Verified Client",
+    role: "Freelance Project",
+    text: "Reliable developer, easy to communicate with, and delivered quality work on time.",
+    rating: 5
+  }
+
 ];
 
 const TestimonialsSection = () => {

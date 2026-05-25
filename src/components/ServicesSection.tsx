@@ -1,12 +1,38 @@
 import AnimatedSection from "./AnimatedSection";
-import { Globe, Layers, Server, LayoutDashboard, Bug } from "lucide-react";
+import { Globe, Layers, Server, LayoutDashboard, Bug, Smartphone, Database, Code } from "lucide-react";
 
 const services = [
-  { icon: Globe, title: "Full Stack Web App", desc: "End-to-end development with React, Node.js, and MongoDB." },
-  { icon: Layers, title: "SaaS Development", desc: "Multi-tenant SaaS platforms with billing and analytics." },
-  { icon: Server, title: "API Development", desc: "RESTful APIs with authentication, rate limiting, and docs." },
-  { icon: LayoutDashboard, title: "Dashboard UI", desc: "Data-rich admin dashboards with charts and real-time updates." },
-  { icon: Bug, title: "Bug Fixing", desc: "Debug, optimize, and refactor existing codebases." },
+  {
+    icon: Smartphone,
+    title: "Android App Development",
+    desc: "Custom Android applications using Java and Firebase with real-time features and clean UI."
+  },
+  {
+    icon: Globe,
+    title: "WordPress Development",
+    desc: "Professional business websites, e-commerce stores, and custom WordPress solutions."
+  },
+  {
+    icon: Database,
+    title: "Firebase Integration",
+    desc: "Authentication, Firestore, Realtime Database, cloud storage, and push notifications."
+  },
+  {
+    icon: LayoutDashboard,
+    title: "Admin Dashboard Development",
+    desc: "Interactive dashboards with data management, analytics, and user-friendly interfaces."
+  },
+  {
+    icon: Code,
+    title: "MERN Stack Learning",
+    desc: "Currently building full-stack web applications with MongoDB, Express.js, React, and Node.js."
+  },
+  {
+    icon: Bug,
+    title: "Bug Fixing & Optimization",
+    desc: "Debugging, performance improvements, and maintaining existing web and mobile applications."
+  }
+
 ];
 
 const ServicesSection = () => (

@@ -4,9 +4,9 @@ import { Mail, Github, Linkedin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const socials = [
-  { icon: Mail, label: "hello@developer.com", href: "mailto:hello@developer.com" },
-  { icon: Github, label: "github.com/developer", href: "#" },
-  { icon: Linkedin, label: "linkedin.com/in/developer", href: "#" },
+  { icon: Mail, label: "hello@sahariarkabir.cv", href: "mailto:hello@sahariarkabir.cv" },
+  { icon: Github, label: "github.com/kabir31416/", href: "#" },
+  { icon: Linkedin, label: "linkedin.com/in/kabir31416", href: "#" },
 ];
 
 const ContactSection = () => {

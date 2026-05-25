@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4">
         <a href="#" className="text-xl font-bold font-heading gradient-text font-mono">
-          &lt;Dev /&gt;
+          &lt;Sahariar Kabir/&gt;
         </a>
 
         <div className="hidden md:flex items-center gap-8">

@@ -2,10 +2,31 @@ import AnimatedSection from "./AnimatedSection";
 import { Briefcase } from "lucide-react";
 
 const timeline = [
-  { year: "2024 - Present", title: "Senior Freelance Developer", desc: "Building complex SaaS products and enterprise applications for global clients.", current: true },
-  { year: "2023 - 2024", title: "SaaS Development", desc: "Developed multiple SaaS platforms with subscription billing, analytics, and multi-tenancy.", current: false },
-  { year: "2022 - 2023", title: "MERN Stack Projects", desc: "Built 15+ full-stack applications including e-commerce, dashboards, and real-time apps.", current: false },
-  { year: "2021 - 2022", title: "Freelance & Client Work", desc: "Started freelancing, delivering web solutions for startups and small businesses.", current: false },
+  {
+    year: "2026 - Present",
+    title: "Learning MERN Stack Development",
+    desc: "Currently focused on mastering MongoDB, Express.js, React, and Node.js by building modern full-stack web applications.",
+    current: true
+  },
+  {
+    year: "2023 - Present",
+    title: "Android App Development",
+    desc: "Developed Android applications using Java and Firebase, including quiz apps, parcel delivery systems, and payment integrations.",
+    current: false
+  },
+  {
+    year: "2022 - Present",
+    title: "WordPress Development",
+    desc: "Built and customized WordPress websites for clients, including business sites, e-commerce stores, and custom functionality.",
+    current: false
+  },
+  {
+    year: "2021 - 2025",
+    title: "Freelance & Client Work",
+    desc: "Started freelancing and delivered web and mobile solutions for individuals and small businesses.",
+    current: false
+  }
+
 ];
 
 const ExperienceSection = () => (

@@ -8,8 +8,7 @@ const categories = [
       { name: "React", level: 95 },
       { name: "Next.js", level: 88 },
       { name: "Tailwind CSS", level: 92 },
-      { name: "Redux", level: 85 },
-      { name: "Framer Motion", level: 80 },
+      { name: "Hero UI", level: 85 },
     ],
   },
   {
@@ -19,7 +18,6 @@ const categories = [
       { name: "Express", level: 90 },
       { name: "REST API", level: 93 },
       { name: "JWT Auth", level: 88 },
-      { name: "Socket.io", level: 82 },
     ],
   },
   {
@@ -27,16 +25,13 @@ const categories = [
     skills: [
       { name: "MongoDB", level: 90 },
       { name: "Firebase", level: 85 },
-      { name: "PostgreSQL", level: 80 },
     ],
   },
   {
     title: "Tools",
     skills: [
       { name: "Git", level: 90 },
-      { name: "Docker", level: 78 },
       { name: "Vercel", level: 88 },
-      { name: "AWS", level: 72 },
     ],
   },
 ];
