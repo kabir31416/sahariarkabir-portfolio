@@ -69,10 +69,12 @@ const AboutSection = () => (
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-6">
           Passionate <span className="gradient-text">Developer</span>
         </h2>
-        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-          With 1+ years of experience building production-ready web applications,
-          I specialize in the MERN stack and love turning complex problems into
-          elegant, scalable solutions.
+        <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-6">
+          I'm a passionate MERN Stack Developer who started my programming journey
+          with curiosity and a strong desire to build real-world applications. What
+          began with simple HTML, CSS, and JavaScript has now grown into developing
+          full-scale web applications using modern technologies like React, Node.js,
+          and MongoDB.
         </p>
       </AnimatedSection>
 

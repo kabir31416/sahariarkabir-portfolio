@@ -1,8 +1,23 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import devImg from "@/assets/developer-hero.jpg";
+import devImg from "@/assets/developer-hero.png";
 
 const techs = ["MongoDB", "Express", "React", "Node.js", "Next.js", "Firebase"];
+
+type ResumeButtonProps = {
+  fileUrl: string;
+  fileName?: string;
+};
+
+const ResumeButton = ({ fileUrl, fileName }: ResumeButtonProps) => (
+  <a
+    href={fileUrl}
+    download={fileName}
+    className="btn-outline-glow text-center"
+  >
+    Download Resume
+  </a>
+);
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center overflow-hidden section-padding pt-28">
@@ -42,7 +57,11 @@ const HeroSection = () => (
             <a href="#projects" className="btn-primary flex items-center justify-center gap-2">
               View Projects <ArrowRight size={16} />
             </a>
-            <a href="#contact" className="btn-outline-glow text-center">Contact Me</a>
+
+            <ResumeButton
+              fileUrl="/resume.pdf"
+              fileName="Sahariar_Kabir_Resume.pdf"
+            />
           </div>
 
           <div className="flex flex-wrap gap-2">

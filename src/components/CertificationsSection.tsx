@@ -3,32 +3,20 @@ import { Award, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
-    title: "AWS Certified Developer",
-    issuer: "Amazon Web Services",
-    date: "2024",
-    credentialId: "AWS-DEV-2024",
+    title: "Python (Basic) Certificate",
+    issuer: "HackerRank",
+    date: "2025",
+    credentialId: "f813e379e112",
     color: "from-orange-500/20 to-yellow-500/20",
+    link: "https://www.hackerrank.com/certificates/f813e379e112",
   },
   {
-    title: "Meta Front-End Developer",
-    issuer: "Meta (Coursera)",
-    date: "2023",
-    credentialId: "META-FE-2023",
+    title: "Mern Stack Developer",
+    issuer: "Programming Hero",
+    date: "2026",
+    credentialId: "WEB13-0181",
     color: "from-blue-500/20 to-cyan-500/20",
-  },
-  {
-    title: "MongoDB Associate Developer",
-    issuer: "MongoDB University",
-    date: "2023",
-    credentialId: "MDB-AD-2023",
-    color: "from-green-500/20 to-emerald-500/20",
-  },
-  {
-    title: "Node.js Application Developer",
-    issuer: "OpenJS Foundation",
-    date: "2023",
-    credentialId: "JSNAD-2023",
-    color: "from-purple-500/20 to-pink-500/20",
+    link: "https://www.programming-hero.com/",
   },
 ];
 
@@ -78,7 +66,8 @@ const CertificationsSection = () => (
               </div>
               <div className="mt-4 pt-3 border-t border-border/50">
                 <a
-                  href="#"
+                  href={cert.link}
+                  target="_blank"
                   className="text-xs text-primary/70 hover:text-primary flex items-center gap-1 font-mono transition-colors"
                 >
                   <ExternalLink size={11} /> verify_credential()
