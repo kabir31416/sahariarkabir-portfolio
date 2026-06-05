@@ -1,12 +1,12 @@
 import { useState } from "react";
 import AnimatedSection from "./AnimatedSection";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send,} from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const socials = [
-  { icon: Mail, label: "hello@sahariarkabir.cv", href: "mailto:hello@sahariarkabir.cv" },
-  { icon: Github, label: "github.com/kabir31416/", href: "#" },
-  { icon: Linkedin, label: "linkedin.com/in/kabir31416", href: "#" },
+  { icon: Mail, label: "sahariarkabir1519@gmail.com", href: "mailto:sahariarkabir1519@gmail.com" },
+  { icon: Github, label: "github.com/kabir31416/", href: "https://github.com/kabir31416/" },
+  { icon: Linkedin, label: "linkedin.com/in/kabir31416", href: "https://linkedin.com/in/kabir31416" },
 ];
 
 const ContactSection = () => {
