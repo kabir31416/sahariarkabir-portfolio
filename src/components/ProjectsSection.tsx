@@ -37,6 +37,83 @@ const projects = [
     future: "Add bookmarking, offline mode, and advanced filtering.",
     color: "from-green-500/20 to-emerald-500/20",
   },
+  {
+    title: "Bipul Photo",
+    desc: "A professional photography portfolio showcasing creative works and visual storytelling.",
+    tech: ["WordPress", "mysql", "Elementor", " PHP"],
+    live: "https://bipulphoto.com",
+    github: "#",
+    challenges:
+      "Optimizing high-quality image loading and creating smooth gallery transitions.",
+    future:
+      "Add AI-based photo tagging and client booking system.",
+    color: "from-pink-500/20 to-orange-500/20",
+  },
+
+  {
+    title: "Photo Tour Bangla",
+    desc: "A travel photography and tour showcase platform highlighting scenic destinations of Bangladesh.",
+   tech: ["WordPress", "mysql", "Elementor", " PHP"],
+    live: "https://phototourbangla.com",
+    github: "#",
+    challenges:
+      "Managing large media content and optimizing SEO for travel-based content.",
+    future:
+      "Add tour booking system and interactive travel map.",
+    color: "from-green-500/20 to-blue-500/20",
+  },
+
+  {
+    title: "Sonar Bangla Tour",
+    desc: "A tourism platform promoting travel packages, destinations, and tour guides across Bangladesh.",
+     tech: ["WordPress", "mysql", "Elementor", " PHP"],
+    live: "https://sonarbanglatour.com",
+    github: "#",
+    challenges:
+      "Implementing dynamic tour package filtering and responsive UI for mobile users.",
+    future:
+      "Add online booking, payment integration, and user reviews.",
+    color: "from-yellow-500/20 to-red-500/20",
+  },
+
+  {
+    title: "Agrani Sangbad",
+    desc: "A modern news portal delivering latest national and international news updates.",
+     tech: ["WordPress", "mysql", "Elementor", " PHP"],
+    live: "https://agranisangbad.net",
+    github: "#",
+    challenges:
+      "Handling real-time news updates and category-based filtering system.",
+    future:
+      "Add push notifications and AI-based news summarization.",
+    color: "from-blue-500/20 to-indigo-500/20",
+  },
+
+  {
+    title: "Srabon Photo",
+    desc: "A creative photography portfolio website focusing on aesthetic visuals and client showcase.",
+     tech: ["WordPress", "mysql", "Elementor", " PHP"],
+    live: "https://srabonphoto.com",
+    github: "#",
+    challenges:
+      "Creating smooth animations without affecting performance.",
+    future:
+      "Add client dashboard and print order system.",
+    color: "from-purple-500/20 to-pink-500/20",
+  },
+
+  {
+    title: "Neuron",
+    desc: "An educational and tech-based platform focused on nursinhg admission students and professionals.",
+     tech: ["WordPress", "mysql", "Elementor", " PHP"],
+    live: "https://neuron.com.bd",
+    github: "#",
+    challenges:
+      "Structuring scalable content modules and authentication system.",
+    future:
+      "Add online courses and AI-based learning assistant.",
+    color: "from-cyan-500/20 to-blue-500/20",
+  },
 ];
 
 const ProjectsSection = () => {
