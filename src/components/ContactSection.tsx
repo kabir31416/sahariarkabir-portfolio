@@ -53,7 +53,7 @@ const ContactSection = () => {
           <AnimatedSection>
             <div className="space-y-4">
               {socials.map((s) => (
-                <a key={s.label} href={s.href} className="glass-card p-4 flex items-center gap-4 block">
+                <a key={s.label} href={s.href} className="glass-card p-4 flex items-center gap-4">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <s.icon size={18} className="text-primary" />
                   </div>
