@@ -4,6 +4,17 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "ArtHub",
+    desc: "A platform to sell and manage artworks with secure authentication.",
+    tech: ["React", "Node.js", "MongoDB", "JWT"],
+    live: "https://art-hub-369.vercel.app/",
+    github: "https://github.com/kabir31416/ArtHub",
+    challenges:
+      "Implementing secure authentication and designing scalable database structure.",
+    future: "Add admin dashboar, role based authentication.",
+    color: "from-green-500/20 to-emerald-500/20",
+  },
+  {
     title: "IdeaVault",
     desc: "A platform to store and manage ideas with secure authentication.",
     tech: ["React", "Node.js", "MongoDB", "JWT"],
